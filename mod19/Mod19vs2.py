@@ -54,7 +54,7 @@ def main():
     # Imagem na sidebar
 try:
     image = Image.open("mod19/img/Bank-Branding.jpg")
-    st.sidebar.image(image, use_column_width=True)
+    st.sidebar.image(image, use_container_width=True)
 except:
     st.sidebar.warning("Imagem não encontrada em 'mod19/img/Bank-Branding.jpg'")
 
