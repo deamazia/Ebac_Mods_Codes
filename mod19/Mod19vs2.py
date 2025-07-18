@@ -52,11 +52,11 @@ def main():
     st.markdown("---")
 
     # Imagem na sidebar
-try:
-    image = Image.open("mod19/img/Bank-Branding.jpg")
-    st.sidebar.image(image, use_container_width=True)
-except:
-    st.sidebar.warning("Imagem não encontrada em 'mod19/img/Bank-Branding.jpg'")
+    try:
+        image = Image.open("img/Bank-Branding.jpg")  # ajuste aqui conforme seu caminho local
+        st.sidebar.image(image, use_column_width=True)
+    except:
+        st.sidebar.warning("Imagem não encontrada em 'img/Bank-Branding.jpg'")
 
     st.sidebar.write("## Suba o arquivo")
     data_file_1 = st.sidebar.file_uploader("Bank marketing data", type=['csv', 'xlsx'])
@@ -126,6 +126,7 @@ except:
         st.download_button("📥 Download tabela filtrada em EXCEL", data=df_xlsx, file_name="bank_filtered.xlsx")
 
     # Proporção de resposta positiva
+
         if bank_raw is not None and bank is not None:
             try:
                 if 'y' in bank_raw.columns and 'y' in bank.columns and not bank_raw.empty and not bank.empty:
