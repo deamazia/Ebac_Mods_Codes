@@ -52,11 +52,11 @@ def main():
     st.markdown("---")
 
     # Imagem na sidebar
-    try:
-        image = Image.open("img/Bank-Branding.jpg")  # ajuste aqui conforme seu caminho local
-        st.sidebar.image(image, use_column_width=True)
-    except:
-        st.sidebar.warning("Imagem não encontrada em 'img/Bank-Branding.jpg'")
+try:
+    image = Image.open("mod19/img/Bank-Branding.jpg")
+    st.sidebar.image(image, use_column_width=True)
+except:
+    st.sidebar.warning("Imagem não encontrada em 'mod19/img/Bank-Branding.jpg'")
 
     st.sidebar.write("## Suba o arquivo")
     data_file_1 = st.sidebar.file_uploader("Bank marketing data", type=['csv', 'xlsx'])
