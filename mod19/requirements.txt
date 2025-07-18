@@ -3,6 +3,4 @@ seaborn
 pandas
 matplotlib
 numpy
-matplotlib.pyplot
-PIL 
-io
+Pillow
